@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F68CE2C7-47E2-41B0-B273-7FC747BFC9F3}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>_2014118110_CON</RootNamespace>
-    <AssemblyName>2014118110-CON</AssemblyName>
+    <ProjectGuid>{90563452-BFE5-479B-96AB-28166AD2AB64}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_2014118110_ENT</RootNamespace>
+    <AssemblyName>2014118110-ENT</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,21 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Administrativo.cs" />
+    <Compile Include="Bus.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Empleado.cs" />
+    <Compile Include="Encomienda.cs" />
+    <Compile Include="LugarViaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\2014118110-ENT\2014118110-ENT.csproj">
-      <Project>{90563452-bfe5-479b-96ab-28166ad2ab64}</Project>
-      <Name>2014118110-ENT</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\2014118110-PER\2014118110-PER.csproj">
-      <Project>{2b190291-8f73-4db9-bb55-27f0d9f12a5e}</Project>
-      <Name>2014118110-PER</Name>
-    </ProjectReference>
+    <Compile Include="Servicio.cs" />
+    <Compile Include="TipoComprobante.cs" />
+    <Compile Include="TipoLugar.cs" />
+    <Compile Include="TipoPago.cs" />
+    <Compile Include="TipoTripulacion.cs" />
+    <Compile Include="TipoViaje.cs" />
+    <Compile Include="Transporte.cs" />
+    <Compile Include="Tripulacion.cs" />
+    <Compile Include="Venta.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
