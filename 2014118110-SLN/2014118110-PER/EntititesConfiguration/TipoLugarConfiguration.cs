@@ -12,7 +12,10 @@ namespace _2014118110_PER.EntititesConfiguration
     {
         public TipoLugarConfiguration()
         {
-
+            //Table configurations
+            ToTable("TipoLugares");
+            HasKey(c => c.TipoLugarId);
+            Property(c => c.NombreTipo).IsRequired().HasMaxLength(300);
         }
     }
 }

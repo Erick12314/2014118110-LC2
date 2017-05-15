@@ -12,7 +12,15 @@ namespace _2014118110_PER.EntititesConfiguration
     {
         public LugarViajeConfiguration()
         {
+            //Table configurations
+            ToTable("LugaresViaje");
+            HasKey(c => c.LugarViajeId);
+            Property(c => c.NombreLugar).IsRequired().HasMaxLength(300);
 
+            //Relationships Configurations
+            HasMany(c => c.TipoLugar)
+                .WithRequired(c => c.LugarViaje)
+                .HasForeignKey(c => c.LugarViajeId);
         }
     }
 }

@@ -12,6 +12,14 @@ namespace _2014118110_PER.EntititesConfiguration
     {
         public ServicioConfiguration()
         {
+            //Table configurations
+            ToTable("Servicios");
+            HasKey(c => c.ServicioId);
+            Property(c => c.NombreServicio).IsRequired().HasMaxLength(100);
+
+            //Table relationships
+            Map<Encomienda>(m => m.Requires("Discriminator").HasValue("Encomienda"));
+            Map<Transporte>(m => m.Requires("Discriminator").HasValue("Transporte"));
 
         }
     }

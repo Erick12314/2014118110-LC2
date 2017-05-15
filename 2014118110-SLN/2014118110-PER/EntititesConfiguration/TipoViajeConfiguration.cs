@@ -12,7 +12,10 @@ namespace _2014118110_PER.EntititesConfiguration
     {
         public TipoViajeConfiguration()
         {
-
+            //Table configurations
+            ToTable("TipoViajes");
+            HasKey(c => c.TipoViajeId);
+            Property(c => c.Nombre).IsRequired().HasMaxLength(300);
         }
     }
 }

@@ -12,7 +12,10 @@ namespace _2014118110_PER.EntititesConfiguration
     {
         public TipoPagoConfiguration()
         {
-
+            //Table configurations
+            ToTable("TipoPagos");
+            HasKey(c => c.TipoPagoId);
+            Property(c => c.MetodoPago).IsRequired().HasMaxLength(300);
         }
     }
 }

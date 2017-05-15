@@ -12,7 +12,16 @@ namespace _2014118110_PER.EntititesConfiguration
     {
         public EncomiendaConfiguration()
         {
+            //Table configurations
+            ToTable("Encomiendas");
+            HasKey(c => c.EncomiendaId);
+            Property(c => c.NombreDestinatario).IsRequired().HasMaxLength(300);
 
+            //Relationships Configurations
+            HasMany(c => c.LugarViaje)
+                .WithRequired(c => c.Encomienda)
+                .HasForeignKey(c => c.EncomiendaId);
+            
         }
     }
 }

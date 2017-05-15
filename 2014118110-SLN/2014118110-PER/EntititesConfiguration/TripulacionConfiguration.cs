@@ -12,7 +12,15 @@ namespace _2014118110_PER.EntititesConfiguration
     {
         public TripulacionConfiguration()
         {
+            //Table configurations
+            ToTable("Tripulaciones");
+            HasKey(c => c.TripulacionId);
+            Property(c => c.Nombre).IsRequired().HasMaxLength(300);
 
+            //Relationships Configurations
+            HasMany(c => c.TipoTripulacion)
+                .WithRequired(c => c.Tripulacion)
+                .HasForeignKey(c => c.TripulacionId);
         }
     }
 }

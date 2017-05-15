@@ -14,8 +14,8 @@ namespace _2014118110_PER.EntititesConfiguration
         {
             //Table configurations
             ToTable("Administrativos");
-            //Relationships configurations
-
+            HasKey(c => c.AdministrativoId);
+            Property(c => c.Cargo).IsRequired();
         }
     }
 }

@@ -12,7 +12,12 @@ namespace _2014118110_PER.EntititesConfiguration
     {
         public ClienteConfiguration()
         {
-
+            //Table configurations
+            ToTable("Clientes");
+            HasKey(c => c.ClienteId);
+            Property(c => c.Nombre).IsRequired().HasMaxLength(50);
+            Property(c => c.Apellidos).IsRequired().HasMaxLength(200);
+            Property(c => c.DNI).IsRequired().HasMaxLength(8);
         }
     }
 }

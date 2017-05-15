@@ -8,6 +8,7 @@ namespace _2014118110_ENT
 {
     public class TipoViaje
     {
+        public int TipoViajeId { get; set; }
         public string Nombre { get; set; }
 
         public int TransporteId { get; set; }

@@ -12,7 +12,10 @@ namespace _2014118110_PER.EntititesConfiguration
     {
         public TipoTripulacionConfiguration()
         {
-
+            //Table configurations
+            ToTable("TipoTripulacion");
+            HasKey(c => c.TipoTripulacionId);
+            Property(c => c.Nombre).IsRequired().HasMaxLength(300);
         }
     }
 }
