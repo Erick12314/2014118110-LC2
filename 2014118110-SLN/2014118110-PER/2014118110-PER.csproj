@@ -63,6 +63,23 @@
       <DependentUpon>201705150654429_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repositories\BusRepository.cs" />
+    <Compile Include="Repositories\ClienteRepository.cs" />
+    <Compile Include="Repositories\TripulacionRepository.cs" />
+    <Compile Include="Repositories\TransporteRepository.cs" />
+    <Compile Include="Repositories\TipoViajeRepository.cs" />
+    <Compile Include="Repositories\TipoTripulacionRepository.cs" />
+    <Compile Include="Repositories\TipoPagoRepository.cs" />
+    <Compile Include="Repositories\TipoLugarRepository.cs" />
+    <Compile Include="Repositories\TipoComprobanteRepository.cs" />
+    <Compile Include="Repositories\ServicioRepository.cs" />
+    <Compile Include="Repositories\LugarViajeRepository.cs" />
+    <Compile Include="Repositories\EncomiendaRepository.cs" />
+    <Compile Include="Repositories\EmpleadoRepository.cs" />
+    <Compile Include="Repositories\AdministrativoRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\UnityOfWork.cs" />
+    <Compile Include="Repositories\VentaRepository.cs" />
     <Compile Include="TransporteDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -79,6 +96,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705150654429_InitialModel.resx">
       <DependentUpon>201705150654429_InitialModel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
