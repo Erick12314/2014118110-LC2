@@ -16,6 +16,11 @@ namespace _2014118110_PER.EntititesConfiguration
             ToTable("TipoCombrobantes");
             HasKey(c => c.TipoComprobanteId);
             Property(c => c.NombreComprobante).IsRequired().HasMaxLength(300);
+
+            //Relationships configurations
+            HasRequired(c => c.Venta)
+                .WithMany(c => c.TipoComprobante)
+                .HasForeignKey(c => c.VentaId);
         }
     }
 }

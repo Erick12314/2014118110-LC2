@@ -17,9 +17,13 @@ namespace _2014118110_PER.EntititesConfiguration
             HasKey(c => c.ServicioId);
             Property(c => c.NombreServicio).IsRequired().HasMaxLength(100);
 
-            //Table relationships
+            //Relationships configurations
             Map<Encomienda>(m => m.Requires("Discriminator").HasValue("Encomienda"));
             Map<Transporte>(m => m.Requires("Discriminator").HasValue("Transporte"));
+
+            HasRequired(c => c.Venta)
+                .WithMany(c => c.Servicio)
+                .HasForeignKey(c => c.VentaId);
 
         }
     }

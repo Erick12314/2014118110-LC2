@@ -21,6 +21,14 @@ namespace _2014118110_PER.EntititesConfiguration
             HasMany(c => c.TipoLugar)
                 .WithRequired(c => c.LugarViaje)
                 .HasForeignKey(c => c.LugarViajeId);
+
+            HasRequired(c => c.Encomienda)
+                .WithMany(c => c.LugarViaje)
+                .HasForeignKey(c => c.EncomiendaId);
+
+            HasRequired(c => c.Transporte)
+                .WithMany(c => c.LugarViaje)
+                .HasForeignKey(c => c.TransporteId);
         }
     }
 }

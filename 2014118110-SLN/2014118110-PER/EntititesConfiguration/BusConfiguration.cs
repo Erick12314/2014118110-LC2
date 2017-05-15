@@ -25,6 +25,10 @@ namespace _2014118110_PER.EntititesConfiguration
             HasMany(c => c.Encomienda)
                 .WithRequired(c => c.Bus)
                 .HasForeignKey(c => c.BusId);
+
+            HasRequired(c => c.Transporte)
+                .WithMany(c => c.Bus)
+                .HasForeignKey(c => c.TransporteId);
         }
     }
 }

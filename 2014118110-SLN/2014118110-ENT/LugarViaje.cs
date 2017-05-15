@@ -17,6 +17,9 @@ namespace _2014118110_ENT
         public int EncomiendaId { get; set; }
         public Encomienda Encomienda { get; set; }
 
+        public int BusId { get; set; }
+        public Bus Bus { get; set; }
+
         public ICollection<TipoLugar> TipoLugar { get; set; }
 
         public LugarViaje()

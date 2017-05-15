@@ -16,6 +16,11 @@ namespace _2014118110_PER.EntititesConfiguration
             ToTable("TipoViajes");
             HasKey(c => c.TipoViajeId);
             Property(c => c.Nombre).IsRequired().HasMaxLength(300);
+
+            //Relationships configurations
+            HasRequired(c => c.Transporte)
+                .WithMany(c => c.TipoViaje)
+                .HasForeignKey(c => c.TransporteId);
         }
     }
 }

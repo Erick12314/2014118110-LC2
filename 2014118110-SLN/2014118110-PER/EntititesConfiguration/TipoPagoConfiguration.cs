@@ -16,6 +16,11 @@ namespace _2014118110_PER.EntititesConfiguration
             ToTable("TipoPagos");
             HasKey(c => c.TipoPagoId);
             Property(c => c.MetodoPago).IsRequired().HasMaxLength(300);
+
+            //Relationships configurations
+            HasRequired(c => c.Venta)
+                .WithMany(c => c.TipoPago)
+                .HasForeignKey(c => c.VentaId);
         }
     }
 }

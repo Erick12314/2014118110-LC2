@@ -8,7 +8,6 @@ namespace _2014118110_ENT
 {
     public class Transporte : Servicio
     {
-        public int TranporteId { get; set; }
 
         public ICollection<Cliente> Cliente { get; set; }
         public ICollection<TipoViaje> TipoViaje { get; set; }

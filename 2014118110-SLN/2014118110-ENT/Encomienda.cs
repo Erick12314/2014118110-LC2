@@ -8,7 +8,6 @@ namespace _2014118110_ENT
 {
     public class Encomienda : Servicio
     {
-        public int EncomiendaId { get; set; }
 
         public string AsuntoEncomienda { get; set; }
         public double Peso { get; set; }
