@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2014118110_ENT
 {
-    public class Servicio
+    public abstract class Servicio
     {
         public int ServicioId { get; set; }
         public string NombreServicio { get; set; }
