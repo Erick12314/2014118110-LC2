@@ -14,8 +14,7 @@ namespace _2014118110_PER.EntititesConfiguration
         {
             //Table configurations
             ToTable("Tripulaciones");
-            HasKey(c => c.TripulacionId);
-            Property(c => c.Nombre).IsRequired().HasMaxLength(300);
+            HasKey(c => c.EmpleadoId);
 
             //Relationships Configurations
             HasMany(c => c.TipoTripulacion)

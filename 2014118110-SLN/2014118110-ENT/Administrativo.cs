@@ -8,8 +8,6 @@ namespace _2014118110_ENT
 {
     public class Administrativo : Empleado
     {
-        public int AdministrativoId { get; set; }
-
         public string Cargo { get; set; }
 
         public int VentaId { get; set; }

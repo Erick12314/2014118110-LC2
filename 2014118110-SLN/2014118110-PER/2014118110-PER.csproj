@@ -62,6 +62,7 @@
     <Compile Include="EntititesConfiguration\ClienteConfiguration.cs" />
     <Compile Include="EntititesConfiguration\BusConfiguration.cs" />
     <Compile Include="EntititesConfiguration\AdministrativoConfiguration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="TransporteDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

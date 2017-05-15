@@ -8,8 +8,6 @@ namespace _2014118110_ENT
 {
     public class Tripulacion : Empleado
     {
-        public int TripulacionId { get; set; }
-
         public int BusId { get; set; }
         public Bus Bus { get; set; }
 
