@@ -18,10 +18,6 @@ namespace _2014118110_ENT.IRepositories
         IEnumerable<TEntity> GetAll();
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
 
-        //UPDATES
-        void Update(TEntity entity);
-        void UpdateRange(IEnumerable<TEntity> entities);
-
         //DELETES
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);

@@ -58,11 +58,6 @@
     <Compile Include="EntititesConfiguration\EmpleadoConfiguration.cs" />
     <Compile Include="EntititesConfiguration\ClienteConfiguration.cs" />
     <Compile Include="EntititesConfiguration\BusConfiguration.cs" />
-    <Compile Include="Migrations\201705150654429_InitialModel.cs" />
-    <Compile Include="Migrations\201705150654429_InitialModel.Designer.cs">
-      <DependentUpon>201705150654429_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\BusRepository.cs" />
     <Compile Include="Repositories\ClienteRepository.cs" />
     <Compile Include="Repositories\TripulacionRepository.cs" />
@@ -92,12 +87,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705150654429_InitialModel.resx">
-      <DependentUpon>201705150654429_InitialModel.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

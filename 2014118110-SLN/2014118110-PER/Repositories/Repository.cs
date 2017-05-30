@@ -23,49 +23,40 @@ namespace _2014118110_PER.Repositories
             _Context = context;
         }
 
-        void IRepository<TEntity>.Add(TEntity entity)
+        public void Add(TEntity entity)
         {
-            throw new NotImplementedException();
+            _Context.Set<TEntity>().Add(entity);
         }
 
-        void IRepository<TEntity>.AddRange(IEnumerable<TEntity> entities)
+        public void AddRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            _Context.Set<TEntity>().AddRange(entities);
         }
 
-        IEnumerable<TEntity> IRepository<TEntity>.Find(Expression<Func<TEntity, bool>> predicate)
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return _Context.Set<TEntity>().Where(predicate);
         }
 
-        TEntity IRepository<TEntity>.Get(int id)
+        public TEntity Get(int id)
         {
-            throw new NotImplementedException();
+            return _Context.Set<TEntity>().Find(id);
         }
 
-        IEnumerable<TEntity> IRepository<TEntity>.GetAll()
+        public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _Context.Set<TEntity>().ToList();
         }
 
-        void IRepository<TEntity>.Remove(TEntity entity)
+        public void Remove(TEntity entity)
         {
-            throw new NotImplementedException();
+            _Context.Set<TEntity>().Remove(entity);
         }
 
-        void IRepository<TEntity>.RemoveRange(IEnumerable<TEntity> entities)
+        public void RemoveRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            _Context.Set<TEntity>().RemoveRange(entities);
         }
 
-        void IRepository<TEntity>.Update(TEntity entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        void IRepository<TEntity>.UpdateRange(IEnumerable<TEntity> entities)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
