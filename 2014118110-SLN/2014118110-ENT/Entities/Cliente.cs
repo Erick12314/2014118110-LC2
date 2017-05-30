@@ -16,7 +16,7 @@ namespace _2014118110_ENT
         public int VentaId { get; set; }
         public Venta Venta { get; set; }
 
-        public int TransporteId { get; set; }
-        public Transporte Transporte { get; set; }
+        public int ServicioId { get; set; }
+        public Servicio Servicio { get; set; }
     }
 }

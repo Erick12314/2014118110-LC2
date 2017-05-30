@@ -14,5 +14,18 @@ namespace _2014118110_ENT
         public string DNI { get; set; }
         public int Edad { get; set; }
         public decimal Sueldo { get; set; }
+
+        public int BusId { get; set; }
+        public Bus Bus { get; set; }
+
+        public int VentaId { get; set; }
+        public Venta Venta { get; set; }
+
+        public ICollection<TipoTripulacion> TipoTripulacion { get; set; }
+
+        public Empleado()
+        {
+            TipoTripulacion = new List<TipoTripulacion>();
+        }
     }
 }

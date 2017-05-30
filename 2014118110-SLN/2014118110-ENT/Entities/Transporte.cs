@@ -8,18 +8,6 @@ namespace _2014118110_ENT
 {
     public class Transporte : Servicio
     {
-
-        public ICollection<Cliente> Cliente { get; set; }
-        public ICollection<TipoViaje> TipoViaje { get; set; }
-        public ICollection<Bus> Bus { get; set; }
-        public ICollection<LugarViaje> LugarViaje { get; set; }
-
-        public Transporte()
-        {
-            Cliente = new List<Cliente>();
-            TipoViaje = new List<TipoViaje>();
-            Bus = new List<Bus>();
-            LugarViaje = new List<LugarViaje>();
-        }
+        public string Observaciones { get; set; }
     }
 }

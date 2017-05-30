@@ -9,6 +9,8 @@ namespace _2014118110_ENT.IRepositories
 {
     public interface IRepository <TEntity> where TEntity : class
     {
+        IQueryable<TEntity> GetEntity();
+
         //CREATES
         void Add(TEntity entity);
         void AddRange(IEnumerable<TEntity> entities);

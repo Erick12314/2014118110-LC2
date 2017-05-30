@@ -2,6 +2,7 @@
 using _2014118110_ENT.IRepositories;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +11,8 @@ namespace _2014118110_PER.Repositories
 {
     public class AdministrativoRepository : Repository<Administrativo>, IAdministrativoRepository
     {
-        private readonly TransporteDbContext _Context;
-
-        private AdministrativoRepository()
+        public AdministrativoRepository(DbContext context) : base(context)
         {
-
-        }
-
-        public AdministrativoRepository(TransporteDbContext context)
-        {
-            _Context = context;
         }
     }
 }

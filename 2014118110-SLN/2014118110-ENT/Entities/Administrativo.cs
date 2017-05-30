@@ -9,8 +9,5 @@ namespace _2014118110_ENT
     public class Administrativo : Empleado
     {
         public string Cargo { get; set; }
-
-        public int VentaId { get; set; }
-        public Venta Venta { get; set; }
     }
 }

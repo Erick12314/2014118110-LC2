@@ -41,7 +41,7 @@ namespace _2014118110_PER
         }
 
         public TransporteDbContext()
-            :base("TransporteContext")
+            :base("TransporteDb")
         {
 
         }

@@ -11,7 +11,7 @@ namespace _2014118110_ENT
         public int TipoTripulacionId { get; set; }
         public string Nombre { get; set; }
 
-        public int TripulacionId { get; set; }
-        public Tripulacion Tripulacion { get; set; }
+        public int EmpleadoId { get; set; }
+        public Empleado Empleado { get; set; }
     }
 }

@@ -13,14 +13,15 @@ namespace _2014118110_PER.Repositories
     {
         private readonly DbContext _Context;
 
-        protected Repository()
-        {
-
-        }
 
         public Repository(DbContext context)
         {
             _Context = context;
+        }
+
+        public IQueryable<TEntity> GetEntity()
+        {
+            return _Context.Set<TEntity>();
         }
 
         public void Add(TEntity entity)

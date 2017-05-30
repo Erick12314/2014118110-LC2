@@ -12,17 +12,14 @@ namespace _2014118110_ENT
         public string Placa { get; set; }
         public string SerieMotor { get; set; }
 
-        public int TransporteId { get; set; }
-        public Transporte Transporte { get; set; }
+        public int ServicioId { get; set; }
+        public Servicio Servicio { get; set; }
 
-        public ICollection<Tripulacion> Tripulacion { get; set; }
-
-        public ICollection<Encomienda> Encomienda { get; set; }
+        public ICollection<Empleado> Empleado { get; set; }
 
         public Bus()
         {
-            Tripulacion = new List<Tripulacion>();
-            Encomienda = new List<Encomienda>();
+            Empleado = new List<Empleado>();
         }
 
     }

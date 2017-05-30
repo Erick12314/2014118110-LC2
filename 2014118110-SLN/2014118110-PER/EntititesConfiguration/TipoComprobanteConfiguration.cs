@@ -1,6 +1,7 @@
 ﻿using _2014118110_ENT;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -15,12 +16,8 @@ namespace _2014118110_PER.EntititesConfiguration
             //Table configurations
             ToTable("TipoCombrobantes");
             HasKey(c => c.TipoComprobanteId);
+            Property(c => c.TipoComprobanteId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(c => c.NombreComprobante).IsRequired().HasMaxLength(300);
-
-            //Relationships configurations
-            HasRequired(c => c.Venta)
-                .WithMany(c => c.TipoComprobante)
-                .HasForeignKey(c => c.VentaId);
         }
     }
 }

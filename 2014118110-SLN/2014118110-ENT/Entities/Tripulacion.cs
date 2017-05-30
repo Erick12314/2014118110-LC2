@@ -8,14 +8,6 @@ namespace _2014118110_ENT
 {
     public class Tripulacion : Empleado
     {
-        public int BusId { get; set; }
-        public Bus Bus { get; set; }
-
-        public ICollection<TipoTripulacion> TipoTripulacion { get; set; }
-
-        public Tripulacion()
-        {
-            TipoTripulacion = new List<TipoTripulacion>();
-        }
+        public string NombreTripulacion { get; set; }
     }
 }

@@ -10,8 +10,6 @@ namespace _2014118110_PER.Repositories
     public class UnityOfWork : IUnityOfWork
     {
         private readonly TransporteDbContext _Context;
-        private static UnityOfWork _Instance;
-        private static readonly object _Lock = new object();
 
         public IAdministrativoRepository Administrativos { get; private set; }
         public IBusRepository Buses { get; private set; }
@@ -51,20 +49,6 @@ namespace _2014118110_PER.Repositories
 
         }
 
-        public static UnityOfWork Instance
-        {
-            get
-            {
-                lock (_Lock)
-                {
-                    if (_Instance == null)
-                        _Instance = new UnityOfWork();
-                }
-
-                return _Instance;
-            }
-        }
-
         public void Dispose()
         {
             _Context.Dispose();
@@ -73,6 +57,11 @@ namespace _2014118110_PER.Repositories
         public int SaveChanges()
         {
             return _Context.SaveChanges();
+        }
+
+        public void StateModified(object Entity)
+        {
+            _Context.Entry(Entity).State = System.Data.Entity.EntityState.Modified;
         }
     }
 }

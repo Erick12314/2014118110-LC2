@@ -1,6 +1,7 @@
 ﻿using _2014118110_ENT;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -15,11 +16,12 @@ namespace _2014118110_PER.EntititesConfiguration
             //Table configurations
             ToTable("Ventas");
             HasKey(c => c.VentaId);
+            Property(c => c.VentaId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(p => p.Fecha).IsRequired();
 
 
             //Relationships Configurations
-            HasMany(c => c.Administrativo)
+            HasMany(c => c.Empleado)
                 .WithRequired(c => c.Venta)
                 .HasForeignKey(c => c.VentaId);
 
@@ -29,7 +31,8 @@ namespace _2014118110_PER.EntititesConfiguration
 
             HasMany(c => c.Servicio)
                 .WithRequired(c => c.Venta)
-                .HasForeignKey(c => c.VentaId);
+                .HasForeignKey(c => c.VentaId)
+                .WillCascadeOnDelete(false);
 
             HasMany(c => c.TipoPago)
                 .WithRequired(c => c.Venta)

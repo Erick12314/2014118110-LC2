@@ -11,7 +11,7 @@ namespace _2014118110_ENT
         public int VentaId { get; set; }
         public DateTime Fecha { get; set; }
 
-        public ICollection<Administrativo> Administrativo { get; set; }
+        public ICollection<Empleado> Empleado { get; set; }
         public ICollection<Cliente> Cliente { get; set; }
         public ICollection<Servicio> Servicio { get; set; }
         public ICollection<TipoPago> TipoPago { get; set; }
@@ -19,7 +19,7 @@ namespace _2014118110_ENT
 
         public Venta()
         {
-            Administrativo = new List<Administrativo>();
+            Empleado = new List<Empleado>();
             Cliente = new List<Cliente>();
             Servicio = new List<Servicio>();
             TipoPago = new List<TipoPago>();
