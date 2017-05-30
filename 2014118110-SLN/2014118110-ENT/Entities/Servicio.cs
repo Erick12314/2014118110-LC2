@@ -12,13 +12,13 @@ namespace _2014118110_ENT
         public string NombreServicio { get; set; }
         public decimal Tarifa { get; set; }
 
-        public int VentaId { get; set; }
-        public Venta Venta { get; set; }
+        public virtual int VentaId { get; set; }
+        public virtual Venta Venta { get; set; }
 
-        public ICollection<Cliente> Cliente { get; set; }
-        public ICollection<TipoViaje> TipoViaje { get; set; }
-        public ICollection<Bus> Bus { get; set; }
-        public ICollection<LugarViaje> LugarViaje { get; set; }
+        public virtual ICollection<Cliente> Cliente { get; set; }
+        public virtual ICollection<TipoViaje> TipoViaje { get; set; }
+        public virtual ICollection<Bus> Bus { get; set; }
+        public virtual ICollection<LugarViaje> LugarViaje { get; set; }
 
         public Servicio()
         {

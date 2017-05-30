@@ -16,7 +16,7 @@ namespace _2014118110_ENT.IRepositories
         void AddRange(IEnumerable<TEntity> entities);
 
         //READS
-        TEntity Get(int id);
+        TEntity Get(int? id);
         IEnumerable<TEntity> GetAll();
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
 

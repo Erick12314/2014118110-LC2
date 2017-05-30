@@ -12,10 +12,10 @@ namespace _2014118110_ENT
         public string Placa { get; set; }
         public string SerieMotor { get; set; }
 
-        public int ServicioId { get; set; }
-        public Servicio Servicio { get; set; }
+        public virtual int ServicioId { get; set; }
+        public virtual Servicio Servicio { get; set; }
 
-        public ICollection<Empleado> Empleado { get; set; }
+        public virtual ICollection<Empleado> Empleado { get; set; }
 
         public Bus()
         {

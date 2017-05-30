@@ -11,10 +11,10 @@ namespace _2014118110_ENT
         public int LugarViajeId { get; set; }
         public string NombreLugar { get; set; }
 
-        public int ServicioId { get; set; }
-        public Servicio Servicio { get; set; }
+        public virtual int ServicioId { get; set; }
+        public virtual Servicio Servicio { get; set; }
 
-        public ICollection<TipoLugar> TipoLugar { get; set; }
+        public virtual ICollection<TipoLugar> TipoLugar { get; set; }
 
         public LugarViaje()
         {

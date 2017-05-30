@@ -11,7 +11,12 @@ namespace _2014118110_ENT
         public int TipoTripulacionId { get; set; }
         public string Nombre { get; set; }
 
-        public int EmpleadoId { get; set; }
-        public Empleado Empleado { get; set; }
+        public virtual int EmpleadoId { get; set; }
+        public virtual Empleado Empleado { get; set; }
+
+        public TipoTripulacion()
+        {
+
+        }
     }
 }

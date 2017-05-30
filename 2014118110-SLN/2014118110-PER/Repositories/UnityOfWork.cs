@@ -27,7 +27,7 @@ namespace _2014118110_PER.Repositories
         public ITripulacionRepository Tripulacion { get; private set; }
         public IVentaRepository Ventas { get; private set; }
 
-        private UnityOfWork()
+        public UnityOfWork()
         {
             _Context = new TransporteDbContext();
 

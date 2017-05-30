@@ -9,5 +9,10 @@ namespace _2014118110_ENT
     public class Transporte : Servicio
     {
         public string Observaciones { get; set; }
+
+        public Transporte()
+        {
+
+        }
     }
 }

@@ -13,10 +13,15 @@ namespace _2014118110_ENT
         public string Apellidos { get; set; }
         public string DNI { get; set; }
 
-        public int VentaId { get; set; }
-        public Venta Venta { get; set; }
+        public virtual int VentaId { get; set; }
+        public virtual Venta Venta { get; set; }
 
-        public int ServicioId { get; set; }
-        public Servicio Servicio { get; set; }
+        public virtual int ServicioId { get; set; }
+        public virtual Servicio Servicio { get; set; }
+
+        public Cliente()
+        {
+
+        }
     }
 }

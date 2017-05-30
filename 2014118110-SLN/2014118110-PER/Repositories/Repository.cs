@@ -39,7 +39,7 @@ namespace _2014118110_PER.Repositories
             return _Context.Set<TEntity>().Where(predicate);
         }
 
-        public TEntity Get(int id)
+        public TEntity Get(int? id)
         {
             return _Context.Set<TEntity>().Find(id);
         }
