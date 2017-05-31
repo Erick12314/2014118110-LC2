@@ -23,12 +23,6 @@ namespace _2014118110_PER.EntititesConfiguration
             Map<Encomienda>(m => m.Requires("Discriminator").HasValue("Encomienda"));
             Map<Transporte>(m => m.Requires("Discriminator").HasValue("Transporte"));
 
-            HasMany(s => s.Cliente)
-                .WithRequired(c => c.Servicio)
-                .HasForeignKey(c => c.ServicioId);
-            HasMany(s => s.TipoViaje)
-                .WithRequired(c => c.Servicio)
-                .HasForeignKey(c => c.ServicioId);
             HasMany(s => s.Bus)
                 .WithRequired(c => c.Servicio)
                 .HasForeignKey(c => c.ServicioId);

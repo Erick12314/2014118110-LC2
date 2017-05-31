@@ -15,15 +15,11 @@ namespace _2014118110_ENT
         public virtual int VentaId { get; set; }
         public virtual Venta Venta { get; set; }
 
-        public virtual ICollection<Cliente> Cliente { get; set; }
-        public virtual ICollection<TipoViaje> TipoViaje { get; set; }
         public virtual ICollection<Bus> Bus { get; set; }
         public virtual ICollection<LugarViaje> LugarViaje { get; set; }
 
         public Servicio()
         {
-            Cliente = new List<Cliente>();
-            TipoViaje = new List<TipoViaje>();
             Bus = new List<Bus>();
             LugarViaje = new List<LugarViaje>();
         }

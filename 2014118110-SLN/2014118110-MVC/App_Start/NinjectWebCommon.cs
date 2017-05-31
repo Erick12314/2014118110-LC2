@@ -10,9 +10,9 @@ namespace _2014118110_MVC.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using _2014118110_PER;
     using _2014118110_ENT.IRepositories;
     using _2014118110_PER.Repositories;
+    using _2014118110_PER;
 
     public static class NinjectWebCommon 
     {

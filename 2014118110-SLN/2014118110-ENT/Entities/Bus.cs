@@ -15,11 +15,11 @@ namespace _2014118110_ENT
         public virtual int ServicioId { get; set; }
         public virtual Servicio Servicio { get; set; }
 
-        public virtual ICollection<Empleado> Empleado { get; set; }
+        public virtual ICollection<Tripulacion> Tripulacion { get; set; }
 
         public Bus()
         {
-            Empleado = new List<Empleado>();
+            Tripulacion = new List<Tripulacion>();
         }
 
     }

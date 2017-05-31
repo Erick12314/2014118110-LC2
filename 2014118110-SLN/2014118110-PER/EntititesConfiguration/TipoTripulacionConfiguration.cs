@@ -18,6 +18,11 @@ namespace _2014118110_PER.EntititesConfiguration
             HasKey(c => c.TipoTripulacionId);
             Property(c => c.TipoTripulacionId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(c => c.Nombre).IsRequired().HasMaxLength(300);
+
+            //Relationships configuration
+            HasRequired(c => c.Tripulacion)
+                .WithMany(c => c.TipoTripulacion)
+                .HasForeignKey(c => c.TripulacionId);
         }
     }
 }

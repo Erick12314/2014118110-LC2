@@ -15,17 +15,9 @@ namespace _2014118110_ENT
         public int Edad { get; set; }
         public decimal Sueldo { get; set; }
 
-        public virtual int BusId { get; set; }
-        public virtual Bus Bus { get; set; }
-
-        public virtual int VentaId { get; set; }
-        public virtual Venta Venta { get; set; }
-
-        public virtual ICollection<TipoTripulacion> TipoTripulacion { get; set; }
-
         public Empleado()
         {
-            TipoTripulacion = new List<TipoTripulacion>();
+            
         }
     }
 }

@@ -22,9 +22,6 @@ namespace _2014118110_PER.EntititesConfiguration
             Property(c => c.DNI).IsRequired().HasMaxLength(8);
 
             //Relationships configurations
-            HasMany(c => c.TipoTripulacion)
-                .WithRequired(c => c.Empleado)
-                .HasForeignKey(c => c.EmpleadoId);     
 
             Map<Administrativo>(m => m.Requires("Discriminator").HasValue("Administrativo"));
             Map<Tripulacion>(m => m.Requires("Discriminator").HasValue("Tripulacion"));

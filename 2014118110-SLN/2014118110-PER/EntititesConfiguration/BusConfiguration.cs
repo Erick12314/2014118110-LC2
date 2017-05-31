@@ -20,7 +20,7 @@ namespace _2014118110_PER.EntititesConfiguration
             Property(c => c.Placa).IsRequired().HasMaxLength(15);
 
             //Relationships Configurations
-            HasMany(c => c.Empleado)
+            HasMany(c => c.Tripulacion)
                 .WithRequired(c => c.Bus)
                 .HasForeignKey(c => c.BusId);
         }

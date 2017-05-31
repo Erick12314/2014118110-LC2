@@ -10,9 +10,14 @@ namespace _2014118110_ENT
     {
         public string NombreTripulacion { get; set; }
 
+        public virtual int BusId { get; set; }
+        public virtual Bus Bus { get; set; }
+
+        public virtual ICollection<TipoTripulacion> TipoTripulacion { get; set; }
+
         public Tripulacion()
         {
-
+            TipoTripulacion = new List<TipoTripulacion>();
         }
     }
 }

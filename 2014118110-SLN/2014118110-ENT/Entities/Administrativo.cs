@@ -10,6 +10,10 @@ namespace _2014118110_ENT
     {
         public string Cargo { get; set; }
 
+        public virtual int VentaId { get; set; }
+        public virtual Venta Venta { get; set; }
+
+
         public Administrativo()
         {
 

@@ -21,7 +21,7 @@ namespace _2014118110_PER.EntititesConfiguration
 
 
             //Relationships Configurations
-            HasMany(c => c.Empleado)
+            HasMany(c => c.Administrativo)
                 .WithRequired(c => c.Venta)
                 .HasForeignKey(c => c.VentaId);
 

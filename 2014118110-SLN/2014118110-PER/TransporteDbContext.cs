@@ -45,5 +45,7 @@ namespace _2014118110_PER
         {
 
         }
+
+        public System.Data.Entity.DbSet<_2014118110_ENT.Administrativo> Empleadoes { get; set; }
     }
 }

@@ -9,9 +9,10 @@ namespace _2014118110_ENT
     public class Venta
     {
         public int VentaId { get; set; }
+        public string Descripcion { get; set; }
         public DateTime Fecha { get; set; }
 
-        public virtual ICollection<Empleado> Empleado { get; set; }
+        public virtual ICollection<Administrativo> Administrativo { get; set; }
         public virtual ICollection<Cliente> Cliente { get; set; }
         public virtual ICollection<Servicio> Servicio { get; set; }
         public virtual ICollection<TipoPago> TipoPago { get; set; }
@@ -19,7 +20,7 @@ namespace _2014118110_ENT
 
         public Venta()
         {
-            Empleado = new List<Empleado>();
+            Administrativo = new List<Administrativo>();
             Cliente = new List<Cliente>();
             Servicio = new List<Servicio>();
             TipoPago = new List<TipoPago>();
