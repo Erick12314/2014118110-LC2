@@ -17,7 +17,7 @@ namespace _2014118110_PER.EntititesConfiguration
             ToTable("TipoTripulacion");
             HasKey(c => c.TipoTripulacionId);
             Property(c => c.TipoTripulacionId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(c => c.Nombre).IsRequired().HasMaxLength(300);
+            Property(c => c.Descripcion).IsRequired().HasMaxLength(300);
 
             //Relationships configuration
             HasRequired(c => c.Tripulacion)

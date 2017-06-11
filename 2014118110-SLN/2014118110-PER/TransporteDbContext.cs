@@ -43,7 +43,8 @@ namespace _2014118110_PER
         public TransporteDbContext()
             :base("TransporteDb")
         {
-
+            Configuration.ProxyCreationEnabled = false;
+            Configuration.LazyLoadingEnabled = false;
         }
 
         public System.Data.Entity.DbSet<_2014118110_ENT.Administrativo> Empleadoes { get; set; }

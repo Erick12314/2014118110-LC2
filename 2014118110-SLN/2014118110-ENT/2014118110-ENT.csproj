@@ -40,6 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\AdministrativoDTO.cs" />
+    <Compile Include="DTO\BusDTO.cs" />
+    <Compile Include="DTO\ClienteDTO.cs" />
+    <Compile Include="DTO\EmpleadoDTO.cs" />
+    <Compile Include="DTO\EncomiendaDTO.cs" />
+    <Compile Include="DTO\LugarViajeDTO.cs" />
+    <Compile Include="DTO\ServicioDTO.cs" />
+    <Compile Include="DTO\TipoComprobanteDTO.cs" />
+    <Compile Include="DTO\TipoLugarDTO.cs" />
+    <Compile Include="DTO\TipoPagoDTO.cs" />
+    <Compile Include="DTO\TipoTripulacionDTO.cs" />
+    <Compile Include="DTO\TipoViajeDTO.cs" />
+    <Compile Include="DTO\TransporteDTO.cs" />
+    <Compile Include="DTO\TripulacionDTO.cs" />
+    <Compile Include="DTO\VentaDTO.cs" />
     <Compile Include="Entities\Administrativo.cs" />
     <Compile Include="Entities\Bus.cs" />
     <Compile Include="Entities\Cliente.cs" />
